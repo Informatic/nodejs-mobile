@@ -55,7 +55,7 @@ function make_toolchain {
         --install-dir=$TOOLCHAIN \
         --stl=libc++ \
         --force \
-        --platform=android-21
+        --platform=android-19
 }
 
 export TOOLCHAIN=$PWD/android-toolchain
