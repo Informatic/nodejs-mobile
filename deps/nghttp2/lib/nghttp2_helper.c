@@ -26,6 +26,7 @@
 
 #include <assert.h>
 #include <string.h>
+#include <sys/endian.h>
 
 #include "nghttp2_net.h"
 
