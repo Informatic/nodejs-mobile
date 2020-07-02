@@ -39,6 +39,11 @@
 # undef POSIX_FADV_NORMAL
 #endif
 
+/* Android before API 21 does not support posix_fadvise() */
+#if defined(__BIONIC__) && __ANDROID_API__ < 21
+# undef POSIX_FADV_NORMAL
+#endif
+
 static void* default_malloc(size_t size, void* mem_user_data) {
   return malloc(size);
 }
